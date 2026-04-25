@@ -1,0 +1,12 @@
+# Environment Variables
+.env
+.env.local
+
+# Mac OS files
+.DS_Store
+
+# Node modules
+node_modules/
+
+# IDE files
+.vscode/

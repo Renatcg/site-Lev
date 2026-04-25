@@ -92,3 +92,93 @@ html.lenis { height: auto; }
     transform: scale(1.05);
     will-change: transform;
 }
+
+/* Flashlight Card Dark */
+.flashlight-card-dark {
+    background: #121212;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+.flashlight-card-dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Villain Cards */
+.vilao-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+.vilao-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255,51,0,0.05), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.vilao-card:hover::before {
+    opacity: 1;
+}
+
+/* Lev Solution Card */
+.lev-solution-card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1C1C1C, #121212);
+}
+
+.spin-slow {
+    animation: spin 8s linear infinite;
+}
+
+.badge-parallax { transform-style: preserve-3d; will-change: transform; }
+.parallax-fast { z-index: 30; }
+.parallax-slow { z-index: 20; }
+
+/* --- Orb Voice Chat Animations (Organic Sound Waves) --- */
+@keyframes ai-wave {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: scale(1) rotate(0deg);
+        opacity: 0.6;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        transform: scale(1.5) rotate(180deg);
+        opacity: 0.15;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: scale(1) rotate(360deg);
+        opacity: 0.6;
+    }
+}
+@keyframes ai-wave-alt {
+    0% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+        transform: scale(1.2) rotate(360deg);
+        opacity: 0.4;
+    }
+    50% {
+        border-radius: 70% 30% 50% 50% / 50% 60% 30% 60%;
+        transform: scale(1.7) rotate(180deg);
+        opacity: 0.1;
+    }
+    100% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+        transform: scale(1.2) rotate(0deg);
+        opacity: 0.4;
+    }
+}
+.animate-orb-wave {
+    animation: ai-wave 4s ease-in-out infinite;
+}
+.animate-orb-wave-alt {
+    animation: ai-wave-alt 5s ease-in-out infinite;
+}

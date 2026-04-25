@@ -1,0 +1,12 @@
+{
+  "name": "lev-incorporation-site",
+  "version": "1.0.0",
+  "description": "Lev Incorporation Static Site with Voice AI Backend",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "devDependencies": {
+    "vercel": "latest"
+  }
+}

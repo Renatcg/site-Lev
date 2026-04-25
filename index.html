@@ -139,6 +139,457 @@
         </div>
     </section>
 
+    <!-- SECTION 2: O PROBLEMA INVISÍVEL -->
+    <section class="relative z-20 py-24 md:py-40 bg-[#FAFAFA] text-stone-900 overflow-hidden" id="problema-section">
+        
+        <!-- Elementos Visuais de Fundo -->
+        <div class="absolute inset-0 bg-grid opacity-60 pointer-events-none"></div>
+        <div class="glow-blob glow-red opacity-50 z-0"></div>
+        
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20">
+                
+                <!-- Coluna de Texto -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col justify-center">
+                    
+                    <div class="invisible-prob-elem inline-flex items-center gap-3 mb-8 bg-white/60 backdrop-blur-md px-4 py-2 border border-stone-200 rounded-full w-max shadow-sm">
+                        <iconify-icon icon="solar:danger-triangle-bold-duotone" class="text-accent text-lg"></iconify-icon>
+                        <span class="text-[10px] font-mono uppercase tracking-widest text-stone-600 font-medium">O Problema Invisível</span>
+                    </div>
+
+                    <h2 id="problema-title" class="font-display text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-8 leading-[1.05]">
+                        O marketing não salva um <span class="text-outline-light !-webkit-text-stroke-[1.5px] !text-transparent" style="-webkit-text-stroke-color: rgba(28,28,28,0.3);">produto ruim.</span>
+                    </h2>
+
+                    <div id="problema-text" class="space-y-6 text-base md:text-lg text-stone-500 font-light leading-relaxed">
+                        <p>
+                            Acreditamos que o gargalo das vendas está sempre na agência ou no time comercial. Mas a verdadeira dor está na <strong class="font-medium text-stone-900">esteira de incorporação</strong>.
+                        </p>
+                        <p>
+                            Enquanto o marketing foca no tráfego, você precisa orquestrar a <em>legalização do terreno</em>, o <em>desenvolvimento do produto</em>, a <em>viabilidade técnico-econômica (VTE)</em>, a arquitetura, o branding, a aprovação de imagens, montagem das tabelas de vendas e o registro do memorial (RI).
+                        </p>
+                        <p>
+                            Coordenar dezenas de fornecedores desconectados gera ruídos, refações constantes, atrasos críticos no cronograma e, no fim, corrói a margem do seu empreendimento.
+                        </p>
+                    </div>
+
+                    <div class="invisible-prob-btn mt-12">
+                        <a href="#solucao" class="shimmer-btn-wrapper group">
+                            <div class="shimmer-btn-inner text-[10px] md:text-xs font-mono uppercase tracking-widest gap-3">
+                                Conheça a Esteira Lev
+                                <iconify-icon icon="solar:arrow-right-linear" class="text-base group-hover:translate-x-1 transition-transform"></iconify-icon>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna Visual / UI Animada -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-7 relative flex items-center justify-center perspective-1000 mt-16 md:mt-0" id="visual-column">
+                    
+                    <div class="w-full relative z-20">
+                        <!-- Main Flashlight Card (Dark Mode) sem rotate hover -->
+                        <div class="flashlight-card-dark p-8 md:p-10 rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.15)] relative z-20 invisible-prob-card" style="opacity:0; transform:translateY(80px) scale(0.95) rotateX(15deg);" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                            
+                            <div class="flex items-start justify-between mb-8 pb-8 border-b border-white/10 relative z-10">
+                                <div>
+                                    <h3 class="font-display text-2xl font-medium text-white mb-1">O Caos do Ecossistema</h3>
+                                    <span class="text-[10px] font-mono text-stone-400 uppercase tracking-widest block">A carga invisível do incorporador</span>
+                                </div>
+                                <div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center border border-accent/20 shadow-[0_0_15px_rgba(255,51,0,0.2)]">
+                                    <iconify-icon icon="solar:hub-bold-duotone" class="text-2xl animate-spin-slow"></iconify-icon>
+                                </div>
+                            </div>
+                            
+                            <!-- Grid de Processos -->
+                            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
+                                <div class="p-5 bg-stone-800/50 border border-stone-700/50 rounded-xl flex flex-col gap-3 group hover:bg-stone-800 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,51,0,0.1)] transition-all overflow-hidden relative">
+                                    <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 opacity-10 transition-transform duration-500 ease-out"></div>
+                                    <iconify-icon icon="solar:document-text-bold-duotone" class="text-2xl text-stone-500 group-hover:text-accent transition-colors relative z-10"></iconify-icon>
+                                    <span class="text-[11px] font-mono uppercase tracking-widest text-stone-300 font-medium group-hover:text-white relative z-10">RI & Legal</span>
+                                </div>
+                                <div class="p-5 bg-stone-800/50 border border-stone-700/50 rounded-xl flex flex-col gap-3 group hover:bg-stone-800 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,51,0,0.1)] transition-all overflow-hidden relative">
+                                    <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 opacity-10 transition-transform duration-500 ease-out"></div>
+                                    <iconify-icon icon="solar:calculator-bold-duotone" class="text-2xl text-stone-500 group-hover:text-accent transition-colors relative z-10"></iconify-icon>
+                                    <span class="text-[11px] font-mono uppercase tracking-widest text-stone-300 font-medium group-hover:text-white relative z-10">VTE & Tabelas</span>
+                                </div>
+                                <div class="p-5 bg-stone-800/50 border border-stone-700/50 rounded-xl flex flex-col gap-3 group hover:bg-stone-800 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,51,0,0.1)] transition-all overflow-hidden relative">
+                                    <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 opacity-10 transition-transform duration-500 ease-out"></div>
+                                    <iconify-icon icon="solar:buildings-bold-duotone" class="text-2xl text-stone-500 group-hover:text-accent transition-colors relative z-10"></iconify-icon>
+                                    <span class="text-[11px] font-mono uppercase tracking-widest text-stone-300 font-medium group-hover:text-white relative z-10">Arquitetura</span>
+                                </div>
+                                <div class="p-5 bg-stone-800/50 border border-stone-700/50 rounded-xl flex flex-col gap-3 group hover:bg-stone-800 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,51,0,0.1)] transition-all overflow-hidden relative">
+                                    <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 opacity-10 transition-transform duration-500 ease-out"></div>
+                                    <iconify-icon icon="solar:palette-bold-duotone" class="text-2xl text-stone-500 group-hover:text-accent transition-colors relative z-10"></iconify-icon>
+                                    <span class="text-[11px] font-mono uppercase tracking-widest text-stone-300 font-medium group-hover:text-white relative z-10">Branding</span>
+                                </div>
+                                <div class="p-5 bg-stone-800/50 border border-stone-700/50 rounded-xl flex flex-col gap-3 group hover:bg-stone-800 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,51,0,0.1)] transition-all overflow-hidden relative">
+                                    <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 opacity-10 transition-transform duration-500 ease-out"></div>
+                                    <iconify-icon icon="solar:camera-bold-duotone" class="text-2xl text-stone-500 group-hover:text-accent transition-colors relative z-10"></iconify-icon>
+                                    <span class="text-[11px] font-mono uppercase tracking-widest text-stone-300 font-medium group-hover:text-white relative z-10">Imagens 3D</span>
+                                </div>
+                                <div class="p-5 bg-stone-800/50 border border-stone-700/50 rounded-xl flex flex-col gap-3 group hover:bg-stone-800 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,51,0,0.1)] transition-all overflow-hidden relative">
+                                    <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 opacity-10 transition-transform duration-500 ease-out"></div>
+                                    <iconify-icon icon="solar:graph-up-bold-duotone" class="text-2xl text-stone-500 group-hover:text-accent transition-colors relative z-10"></iconify-icon>
+                                    <span class="text-[11px] font-mono uppercase tracking-widest text-stone-300 font-medium group-hover:text-white relative z-10">Vendas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Parallax Feedback Badges (Positioned Completely Outside) -->
+                        <div class="invisible-prob-float badge-parallax-1 absolute -top-12 md:-top-20 -left-8 md:-left-24 w-[240px] p-5 bg-white/90 backdrop-blur-xl rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-stone-200 z-30" style="opacity:0; transform:scale(0.8) translateY(20px);">
+                            <div class="flex items-center gap-3 mb-3 pb-3 border-b border-stone-100">
+                                <iconify-icon icon="solar:hourglass-bold-duotone" class="text-accent text-xl"></iconify-icon>
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-stone-500">Perda de Foco</span>
+                            </div>
+                            <p class="text-xs leading-relaxed font-medium text-stone-800">Você perde 40% do seu tempo só em reuniões de alinhamento com fornecedores.</p>
+                        </div>
+
+                        <div class="invisible-prob-float badge-parallax-2 absolute -bottom-8 md:-bottom-16 -right-8 md:-right-24 w-[250px] p-5 bg-white/90 backdrop-blur-xl rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-stone-200 z-30" style="opacity:0; transform:scale(0.8) translateY(-20px);">
+                            <div class="flex items-center gap-3 mb-3 pb-3 border-b border-stone-100">
+                                <iconify-icon icon="solar:danger-circle-bold-duotone" class="text-accent text-2xl"></iconify-icon>
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-stone-500">Alerta Crítico</span>
+                            </div>
+                            <p class="text-xs leading-relaxed font-medium text-stone-800">"A planta mudou, precisamos refazer todos os renders e atualizar a VTE."</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: A NOVA LÓGICA DA INCORPORAÇÃO -->
+    <section class="relative z-30 py-32 md:py-48 bg-stone-900 text-white overflow-hidden" id="logica-section">
+        <div class="absolute inset-0 bg-grid-dark opacity-20 pointer-events-none"></div>
+        <div class="glow-blob bg-accent/10 w-[600px] h-[600px] blur-[100px] rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-50 z-0 pointer-events-none"></div>
+
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+            
+            <div class="text-center max-w-4xl mx-auto mb-20 md:mb-32">
+                <div class="logica-elem inline-flex items-center gap-3 mb-8 px-4 py-2 border border-white/10 rounded-full w-max mx-auto shadow-sm bg-white/5 backdrop-blur-md" style="opacity:0; transform:translateY(30px);">
+                    <iconify-icon icon="solar:shield-warning-bold-duotone" class="text-accent text-lg"></iconify-icon>
+                    <span class="text-[10px] font-mono uppercase tracking-widest text-white/60 font-medium">O Verdadeiro Vilão</span>
+                </div>
+
+                <h2 id="logica-title" class="font-display text-4xl md:text-5xl lg:text-7xl font-medium tracking-tight mb-8 leading-[1.05]">
+                    A culpa <span class="text-accent italic">não é</span> sua. <br>É do modelo fraturado.
+                </h2>
+
+                <p class="logica-elem text-base md:text-xl text-white/60 font-light leading-relaxed max-w-2xl mx-auto" style="opacity:0; transform:translateY(30px);">
+                    Disseram que você precisava de mais "leads". Mas a verdade é que seu VGV é engolido diariamente por um <strong class="text-white font-medium">frankenstein de fornecedores soltos</strong> que não têm compromisso com o seu risco.
+                </p>
+            </div>
+
+            <!-- Comparativo Visual (Os Vilões vs A Máquina Lev) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center relative">
+                
+                <!-- Coluna: Os Vilões -->
+                <div class="lg:col-span-5 space-y-4 md:space-y-6 z-10 relative">
+                    <h3 class="logica-elem text-[11px] font-mono uppercase tracking-widest text-stone-500 mb-6 md:mb-8 border-b border-white/10 pb-4" style="opacity:0;">O que devora sua margem</h3>
+                    
+                    <div class="vilao-card p-6 rounded-xl border border-white/5 bg-white/5 backdrop-blur-sm group hover:border-red-500/30 transition-colors" style="opacity:0; transform:translateX(-30px);">
+                        <div class="flex gap-4 items-start">
+                            <iconify-icon icon="solar:ghost-bold-duotone" class="text-3xl text-stone-600 group-hover:text-red-400 transition-colors mt-1"></iconify-icon>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Agências Genéricas</h4>
+                                <p class="text-sm text-stone-400 leading-relaxed">Prometem zerar o estoque, mas só entregam planilhas cheias de "leads frios" e curiosos que não passam no crédito.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vilao-card p-6 rounded-xl border border-white/5 bg-white/5 backdrop-blur-sm group hover:border-red-500/30 transition-colors" style="opacity:0; transform:translateX(-30px);">
+                        <div class="flex gap-4 items-start">
+                            <iconify-icon icon="solar:ruler-cross-pen-bold-duotone" class="text-3xl text-stone-600 group-hover:text-red-400 transition-colors mt-1"></iconify-icon>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Arquitetos "Estrelas"</h4>
+                                <p class="text-sm text-stone-400 leading-relaxed">Desenham fachadas premiadas, mas ignoram completamente a VTE, estourando o custo de obra.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vilao-card p-6 rounded-xl border border-white/5 bg-white/5 backdrop-blur-sm group hover:border-red-500/30 transition-colors" style="opacity:0; transform:translateX(-30px);">
+                        <div class="flex gap-4 items-start">
+                            <iconify-icon icon="solar:scale-bold-duotone" class="text-3xl text-stone-600 group-hover:text-red-400 transition-colors mt-1"></iconify-icon>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Jurídico Lento</h4>
+                                <p class="text-sm text-stone-400 leading-relaxed">Travam o seu RI por meses com burocracias infinitas enquanto o custo financeiro do terreno engole o seu lucro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divisor Visual -->
+                <div class="lg:col-span-2 flex justify-center py-8 lg:py-0 relative z-0">
+                    <div class="w-px h-24 lg:h-[400px] bg-gradient-to-b from-transparent via-accent/50 to-transparent relative logica-divider" style="opacity:0; transform:scaleY(0); transform-origin:top;">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-stone-900 border border-accent/50 flex items-center justify-center text-accent shadow-[0_0_20px_rgba(255,51,0,0.3)]">
+                            <iconify-icon icon="solar:close-circle-line-duotone" class="text-xl"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna: A Solução Lev -->
+                <div class="lg:col-span-5 relative z-20 mt-8 lg:mt-0">
+                    <h3 class="logica-elem text-[11px] font-mono uppercase tracking-widest text-accent mb-6 md:mb-8 border-b border-accent/20 pb-4 text-left lg:text-right" style="opacity:0;">A Nova Lógica da Incorporação</h3>
+                    
+                    <div class="lev-solution-card relative p-8 md:p-10 rounded-2xl bg-gradient-to-br from-stone-800 to-stone-900 border border-accent/30 shadow-[0_30px_60px_rgba(255,51,0,0.1)] overflow-hidden group" style="opacity:0; transform:translateX(50px) scale(0.95);">
+                        <!-- Glow effect -->
+                        <div class="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                        
+                        <div class="w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-accent/20 transform group-hover:scale-110 transition-transform duration-500">
+                            <iconify-icon icon="solar:cpu-bolt-bold-duotone" class="text-3xl animate-pulse"></iconify-icon>
+                        </div>
+
+                        <h4 class="font-display text-3xl md:text-4xl font-medium text-white mb-4">A Máquina Integrada</h4>
+                        
+                        <p class="text-base text-stone-300 leading-relaxed mb-8">
+                            A Lev substitui o caos por uma <strong>operação de esteira fluida e previsível</strong>. Nós amarramos as pontas soltas. 
+                        </p>
+                        
+                        <ul class="space-y-5 mb-10">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold-duotone" class="text-accent text-xl shrink-0 mt-0.5"></iconify-icon>
+                                <span class="text-sm text-stone-400">Marketing, Produto e Jurídico falando a mesma língua: a linguagem do <strong class="text-white">VGV líquido</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold-duotone" class="text-accent text-xl shrink-0 mt-0.5"></iconify-icon>
+                                <span class="text-sm text-stone-400">Inteligência de mercado guiando o projeto arquitetônico (VTE blindada).</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold-duotone" class="text-accent text-xl shrink-0 mt-0.5"></iconify-icon>
+                                <span class="text-sm text-stone-400">Lançamento orquestrado sem "ruídos" entre corretores e agência.</span>
+                            </li>
+                        </ul>
+
+                        <button class="w-full py-4 bg-white text-stone-900 rounded-xl font-mono text-[10px] uppercase tracking-widest font-bold hover:bg-stone-200 transition-colors flex items-center justify-center gap-2 group/btn relative overflow-hidden">
+                            <div class="absolute inset-0 bg-accent translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
+                            <span class="relative z-10 group-hover/btn:text-white transition-colors flex items-center gap-2">
+                                Assumir o Controle
+                                <iconify-icon icon="solar:arrow-right-linear" class="text-base group-hover/btn:translate-x-1 transition-transform"></iconify-icon>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: O QUE É A LEV (Minimalismo Apple & Pluma Interativa) -->
+    <section class="relative z-20 h-[100vh] min-h-[800px] bg-gradient-to-b from-[#FAFAFA] to-stone-200 overflow-hidden flex flex-col justify-center" id="sobre-lev-section">
+        
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none mix-blend-multiply"></div>
+        <div class="glow-blob bg-accent/5 w-[800px] h-[800px] blur-[120px] rounded-full absolute -top-[400px] -right-[400px] opacity-60 z-0 pointer-events-none"></div>
+
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 w-full mb-32">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-4 mb-10" style="opacity:0;" id="sobre-tag">
+                    <span class="w-12 h-[1px] bg-stone-300"></span>
+                    <span class="text-[11px] font-mono uppercase tracking-widest text-stone-400 font-medium">A Solução Definitiva</span>
+                </div>
+
+                <h2 id="sobre-title" class="font-display text-4xl md:text-6xl lg:text-[4.5rem] font-medium tracking-tight text-stone-900 leading-[1.05] mb-8">
+                    Nós assumimos o peso.<br>Você foca no negócio.
+                </h2>
+
+                <p class="text-xl md:text-2xl text-stone-400 font-light leading-relaxed max-w-3xl" id="sobre-text" style="opacity:0; transform:translateY(30px);">
+                    A Lev é uma <strong>esteira estratégica</strong>. Da VTE ao jurídico, nós substituímos as agências e despachantes por uma operação perfeitamente <span class="text-stone-900 font-medium">fluida e invisível.</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Área da Pluma Interativa ("O Chão") -->
+        <!-- O evento de mouse será capturado pela seção inteira -->
+        <div class="absolute inset-0 z-0 pointer-events-none perspective-[1200px]" id="feather-container">
+            <!-- Wrapper para facilitar o eixo X centralizado sem conflitar com o GSAP -->
+            <div class="absolute bottom-10 left-1/2 w-[400px] -ml-[200px]" id="feather-wrapper">
+                <!-- Sombra Dinâmica no Chão (Mais densa e visível) -->
+                <div id="feather-shadow" class="absolute bottom-2 left-1/2 w-[220px] h-[20px] -ml-[110px] bg-black/40 blur-md rounded-[100%] origin-center z-0"></div>
+                
+                <!-- A Imagem da Pluma -->
+                <!-- Removido mix-blend-multiply para que a pluma não fique translúcida sobre a sombra -->
+                <img src="assets/images/Pena branca.png" id="interactive-feather" alt="Pluma flutuando representando a fluidez da Lev" class="w-full h-auto object-contain origin-center relative z-10" style="filter: brightness(1.05) contrast(1.1); transform-style: preserve-3d;">
+            </div>
+        </div>
+        
+        <!-- Instrução sutil para o usuário -->
+        <div class="absolute bottom-8 right-12 text-stone-300 font-mono text-[10px] uppercase tracking-widest animate-pulse pointer-events-none">
+            Aproxime o mouse
+        </div>
+    </section>
+
+    <!-- SECTION 5: A ESTEIRA LEV (Interactive Apple-like Showcase) -->
+    <section id="esteira-section" class="relative z-20 w-full min-h-screen bg-[#FAFAFA] py-24 md:py-32 overflow-hidden border-t border-stone-200">
+        
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+            <!-- Header Section -->
+            <div class="mb-16 md:mb-24 max-w-2xl">
+                <div class="inline-flex items-center gap-4 mb-8">
+                    <span class="w-12 h-[1px] bg-stone-300"></span>
+                    <span class="text-[11px] font-mono uppercase tracking-widest text-stone-400 font-medium">O Método</span>
+                </div>
+                <h2 class="font-display text-4xl md:text-6xl font-medium tracking-tight text-stone-900 leading-[1.05]">
+                    A Esteira Lev.
+                </h2>
+                <p class="mt-6 text-xl text-stone-500 font-light leading-relaxed">
+                    Não fornecemos serviços fragmentados. Assumimos a ponta a ponta da incorporação.
+                </p>
+            </div>
+
+            <!-- Two Columns Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+                
+                <!-- Left Column: Interactive Accordion -->
+                <div class="lg:col-span-5 w-full flex flex-col gap-3 relative z-20" id="esteira-accordion">
+                    
+                    <!-- Item 1 -->
+                    <button class="esteira-item group flex flex-col items-start bg-stone-100/80 hover:bg-stone-200/80 transition-colors w-full rounded-[32px] overflow-hidden cursor-pointer" data-index="0" data-active="true">
+                        <div class="flex items-center gap-4 w-full p-4 md:p-5">
+                            <div class="w-8 h-8 rounded-full border border-stone-300 flex items-center justify-center shrink-0 bg-white/50 transition-colors">
+                                <iconify-icon icon="line-md:plus" class="text-stone-900 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] rotate-45"></iconify-icon>
+                            </div>
+                            <span class="font-medium text-stone-900 text-sm md:text-base">Análise do terreno</span>
+                        </div>
+                        <div class="esteira-content w-full px-5 pb-6 text-left text-sm md:text-base text-stone-500 leading-relaxed overflow-hidden">
+                            <p>Cruzamento de dados para definir a vocação exata da área, garantindo máxima rentabilidade antes do primeiro traço do projeto.</p>
+                        </div>
+                    </button>
+
+                    <!-- Item 2 -->
+                    <button class="esteira-item group flex flex-col items-start bg-stone-100/80 hover:bg-stone-200/80 transition-colors w-full rounded-full overflow-hidden cursor-pointer" data-index="1" data-active="false">
+                        <div class="flex items-center gap-4 w-full p-4 md:p-5">
+                            <div class="w-8 h-8 rounded-full border border-stone-300 flex items-center justify-center shrink-0 bg-white/50 transition-colors">
+                                <iconify-icon icon="line-md:plus" class="text-stone-900 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"></iconify-icon>
+                            </div>
+                            <span class="font-medium text-stone-900 text-sm md:text-base">Inteligência de produto</span>
+                        </div>
+                        <div class="esteira-content w-full px-5 pb-6 text-left text-sm md:text-base text-stone-500 leading-relaxed overflow-hidden h-0 opacity-0">
+                            <p>Modelagem técnica e financeira do empreendimento focada no morador moderno e nas tendências globais de arquitetura.</p>
+                        </div>
+                    </button>
+
+                    <!-- Item 3 -->
+                    <button class="esteira-item group flex flex-col items-start bg-stone-100/80 hover:bg-stone-200/80 transition-colors w-full rounded-full overflow-hidden cursor-pointer" data-index="2" data-active="false">
+                        <div class="flex items-center gap-4 w-full p-4 md:p-5">
+                            <div class="w-8 h-8 rounded-full border border-stone-300 flex items-center justify-center shrink-0 bg-white/50 transition-colors">
+                                <iconify-icon icon="line-md:plus" class="text-stone-900 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"></iconify-icon>
+                            </div>
+                            <span class="font-medium text-stone-900 text-sm md:text-base">Posicionamento</span>
+                        </div>
+                        <div class="esteira-content w-full px-5 pb-6 text-left text-sm md:text-base text-stone-500 leading-relaxed overflow-hidden h-0 opacity-0">
+                            <p>Criação do naming, branding e da alma do projeto. Transformamos blocos de concreto em marcas desejáveis.</p>
+                        </div>
+                    </button>
+
+                    <!-- Item 4 -->
+                    <button class="esteira-item group flex flex-col items-start bg-stone-100/80 hover:bg-stone-200/80 transition-colors w-full rounded-full overflow-hidden cursor-pointer" data-index="3" data-active="false">
+                        <div class="flex items-center gap-4 w-full p-4 md:p-5">
+                            <div class="w-8 h-8 rounded-full border border-stone-300 flex items-center justify-center shrink-0 bg-white/50 transition-colors">
+                                <iconify-icon icon="line-md:plus" class="text-stone-900 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"></iconify-icon>
+                            </div>
+                            <span class="font-medium text-stone-900 text-sm md:text-base">Legalização e estruturação</span>
+                        </div>
+                        <div class="esteira-content w-full px-5 pb-6 text-left text-sm md:text-base text-stone-500 leading-relaxed overflow-hidden h-0 opacity-0">
+                            <p>Gestão de toda a burocracia de aprovações, RI (Registro de Incorporação) e estruturação jurídica para o lançamento.</p>
+                        </div>
+                    </button>
+
+                    <!-- Item 5 -->
+                    <button class="esteira-item group flex flex-col items-start bg-stone-100/80 hover:bg-stone-200/80 transition-colors w-full rounded-full overflow-hidden cursor-pointer" data-index="4" data-active="false">
+                        <div class="flex items-center gap-4 w-full p-4 md:p-5">
+                            <div class="w-8 h-8 rounded-full border border-stone-300 flex items-center justify-center shrink-0 bg-white/50 transition-colors">
+                                <iconify-icon icon="line-md:plus" class="text-stone-900 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"></iconify-icon>
+                            </div>
+                            <span class="font-medium text-stone-900 text-sm md:text-base">Narrativa comercial</span>
+                        </div>
+                        <div class="esteira-content w-full px-5 pb-6 text-left text-sm md:text-base text-stone-500 leading-relaxed overflow-hidden h-0 opacity-0">
+                            <p>Desenvolvimento dos argumentos de venda, bookings premium, e treinamento intensivo da força de corretores.</p>
+                        </div>
+                    </button>
+
+                    <!-- Item 6 -->
+                    <button class="esteira-item group flex flex-col items-start bg-stone-100/80 hover:bg-stone-200/80 transition-colors w-full rounded-full overflow-hidden cursor-pointer" data-index="5" data-active="false">
+                        <div class="flex items-center gap-4 w-full p-4 md:p-5">
+                            <div class="w-8 h-8 rounded-full border border-stone-300 flex items-center justify-center shrink-0 bg-white/50 transition-colors">
+                                <iconify-icon icon="line-md:plus" class="text-stone-900 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"></iconify-icon>
+                            </div>
+                            <span class="font-medium text-stone-900 text-sm md:text-base">Marketing de lançamento</span>
+                        </div>
+                        <div class="esteira-content w-full px-5 pb-6 text-left text-sm md:text-base text-stone-500 leading-relaxed overflow-hidden h-0 opacity-0">
+                            <p>Campanhas orquestradas, eventos de meeting e estratégias de *hype* para gerar desejo absurdo na praça.</p>
+                        </div>
+                    </button>
+
+                    <!-- Item 7 -->
+                    <button class="esteira-item group flex flex-col items-start bg-stone-100/80 hover:bg-stone-200/80 transition-colors w-full rounded-full overflow-hidden cursor-pointer" data-index="6" data-active="false">
+                        <div class="flex items-center gap-4 w-full p-4 md:p-5">
+                            <div class="w-8 h-8 rounded-full border border-stone-300 flex items-center justify-center shrink-0 bg-white/50 transition-colors">
+                                <iconify-icon icon="line-md:plus" class="text-stone-900 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"></iconify-icon>
+                            </div>
+                            <span class="font-medium text-stone-900 text-sm md:text-base">Captação de leads</span>
+                        </div>
+                        <div class="esteira-content w-full px-5 pb-6 text-left text-sm md:text-base text-stone-500 leading-relaxed overflow-hidden h-0 opacity-0">
+                            <p>Tráfego pago cirúrgico, performance avançada e funis de conversão automatizados para lotar seu stand de vendas.</p>
+                        </div>
+                    </button>
+
+                    <!-- Item 8 -->
+                    <button class="esteira-item group flex flex-col items-start bg-stone-100/80 hover:bg-stone-200/80 transition-colors w-full rounded-full overflow-hidden cursor-pointer" data-index="7" data-active="false">
+                        <div class="flex items-center gap-4 w-full p-4 md:p-5">
+                            <div class="w-8 h-8 rounded-full border border-stone-300 flex items-center justify-center shrink-0 bg-white/50 transition-colors">
+                                <iconify-icon icon="line-md:plus" class="text-stone-900 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"></iconify-icon>
+                            </div>
+                            <span class="font-medium text-stone-900 text-sm md:text-base">Inteligência de vendas</span>
+                        </div>
+                        <div class="esteira-content w-full px-5 pb-6 text-left text-sm md:text-base text-stone-500 leading-relaxed overflow-hidden h-0 opacity-0">
+                            <p>Monitoramento em tempo real via dashboard exclusivo. Você acompanha o VGV liquidado a cada nova assinatura.</p>
+                        </div>
+                    </button>
+
+                </div>
+
+                <!-- Right Column: Interactive Video Showcase -->
+                <div class="lg:col-span-7 relative h-[500px] md:h-[600px] lg:h-[700px] w-full lg:sticky lg:top-32 rounded-[40px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.1)] bg-stone-200 group">
+                    <!-- Glass Shine Effect Overlay -->
+                    <div class="absolute inset-0 z-10 pointer-events-none rounded-[40px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4),inset_0_2px_10px_rgba(255,255,255,0.5)]"></div>
+                    
+                    <!-- Gradient Flare Overlay (Parallax) -->
+                    <div id="esteira-video-flare" class="absolute -top-[200px] -right-[200px] w-[600px] h-[600px] bg-white/40 blur-[100px] rounded-full z-10 pointer-events-none transition-transform duration-1000 ease-out"></div>
+                    
+                    <video 
+                        id="esteira-video" 
+                        class="absolute inset-0 w-full h-full object-cover z-0"
+                        muted playsinline preload="auto"
+                    >
+                        <source src="assets/videos/Lev-Hero.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Voice Chat Orb -->
+    <!-- Positioned fixed at bottom-right -->
+    <a href="#" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] flex items-center justify-center w-24 h-24 group cursor-pointer" aria-label="Chat de Voz com IA">
+        <!-- Waves (Liquid / Organic Listening Effect) -->
+        <div class="absolute inset-0 bg-stone-900 animate-orb-wave mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-stone-800 animate-orb-wave-alt mix-blend-multiply"></div>
+        
+        <!-- Center Orb (Black Glassmorphism) -->
+        <div class="relative z-10 w-20 h-20 bg-stone-900 text-white rounded-full flex flex-col items-center justify-center shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-transform duration-500 group-hover:scale-110 border border-white/20 overflow-hidden">
+            <!-- Efeito de brilho interno dinâmico -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-30 mix-blend-overlay animate-pulse"></div>
+            
+            <!-- Ícone e Texto -->
+            <iconify-icon icon="solar:microphone-3-bold-duotone" class="text-xl mb-0.5 text-accent relative z-20"></iconify-icon>
+            <span class="text-[7px] font-mono uppercase tracking-widest text-center leading-tight px-2 text-white/80 relative z-20">Clique para<br>falar</span>
+        </div>
+    </a>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>
