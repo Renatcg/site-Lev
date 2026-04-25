@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artools Precision Series | A Caneta Mais Tecnológica</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lev - Terceirize sua incorporação</title>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind & Iconify (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
-    <!-- GSAP + ScrollTrigger (CDN) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
 
-    <!-- Design System Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -32,375 +28,117 @@
                         display: ['Space Grotesk', 'sans-serif'],
                     },
                     colors: {
-                        stone: {
-                            50: '#fafaf9',
-                            100: '#f5f5f4',
-                            200: '#e7e5e4',
-                            300: '#d6d3d1',
-                            400: '#a8a29e',
-                            500: '#78716c',
-                            600: '#57534e',
-                            700: '#44403c',
-                            800: '#292524',
-                            900: '#1c1917',
-                        },
-                        'surface-light': '#EAEAE5',
-                    },
-                    animation: {
-                        'spin-slow': 'spin 8s linear infinite',
+                        accent: '#FF3300',
                     }
                 }
             }
         }
     </script>
 
-    <style>
-        /* BASE STYLES & OVERRIDES */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #EAEAE5;
-            color: #1C1917;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* NOISE GRAIN TEXTURE */
-        .noise {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.04;
-            pointer-events: none;
-            z-index: 9999;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        }
-
-        /* TEXT OUTLINE EFFECT */
-        .text-outline {
-            -webkit-text-stroke: 1px currentColor;
-            color: transparent;
-        }
-
-        /* BUTTON BEAM ANIMATION */
-        .btn-beam {
-            position: relative;
-            z-index: 10;
-            overflow: hidden;
-        }
-
-        .btn-beam::before {
-            content: "";
-            position: absolute;
-            inset: -2px;
-            z-index: -1;
-            background: conic-gradient(from 90deg at 50% 50%, #E2E8F0 0%, #000000 50%, #E2E8F0 100%);
-            animation: spin 4s linear infinite;
-            border-radius: inherit;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .btn-beam:hover::before {
-            opacity: 1;
-        }
-
-        .btn-beam-content {
-            background-color: #1c1917;
-            color: white;
-            position: relative;
-            z-index: 10;
-            width: 100%;
-            height: 100%;
-            border-radius: inherit;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* UTILS */
-        .text-balance {
-            text-wrap: balance;
-        }
-
-        /* CUSTOM SCROLLBAR */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #EAEAE5;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #d6d3d1;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #a8a29e;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+<body>
 
-<body class="antialiased selection:bg-stone-800 selection:text-white">
+    <div class="loader" id="loader">
+        <div class="flex flex-col items-center gap-4 text-center">
+            <iconify-icon icon="solar:camera-bold-duotone" class="text-3xl text-white"></iconify-icon>
+            <span class="font-mono text-xs uppercase tracking-widest text-white/50" id="loader-text">Compilando frames (0%)</span>
+            <p class="text-[10px] text-white/30 max-w-[200px] mt-2">Usando tecnologia de cache em Canvas para fluidez perfeita</p>
+        </div>
+    </div>
 
     <div class="noise"></div>
 
-    <!-- NAVBAR -->
-    <header
-        class="fixed top-0 w-full z-50 px-6 py-6 transition-all duration-300 pointer-events-none mix-blend-difference text-stone-900 invert">
-        <div class="max-w-[1440px] mx-auto flex justify-between items-center pointer-events-auto">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-stone-900 text-white flex items-center justify-center rounded-sm">
-                    <iconify-icon icon="solar:cube-bold-duotone" class="text-xl"></iconify-icon>
+    <header class="fixed top-0 left-0 w-full z-50 bg-stone-900/40 backdrop-blur-xl border-b border-white/10 opacity-0 translate-y-[-20px] text-white" id="header">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group" style="perspective: 400px;">
+                <div class="w-8 h-8 flex items-center justify-center rounded-lg shadow-lg overflow-hidden logo-spin-y group-hover:shadow-accent/30">
+                    <img src="assets/images/favicon_lev.png" alt="Lev Logo" class="w-full h-full object-cover">
                 </div>
-                <!-- Inverted by mix-blend above, so we keep text standard colors -->
-                <span class="font-display font-medium tracking-tight text-lg text-white">AR<span
-                        class="text-stone-400">TOOLS</span></span>
-            </div>
-
-            <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-stone-300">
-                <a href="#" class="hover:text-white transition-colors">Technology</a>
-                <a href="#" class="hover:text-white transition-colors">Design</a>
-                <a href="#" class="hover:text-white transition-colors">Specs</a>
+                <span class="font-display font-medium tracking-tight text-2xl transition-colors duration-300 group-hover:text-white/80">Lev<span class="text-accent transition-colors duration-300 group-hover:text-accent/80">.</span></span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-10 text-[11px] font-mono uppercase tracking-[0.2em] text-white/70">
+                <a href="#" class="hover:text-white transition-colors relative group">Método</a>
+                <a href="#" class="hover:text-white transition-colors relative group">Esteira</a>
+                <a href="#" class="hover:text-white transition-colors relative group">Produto</a>
+                <a href="#" class="hover:text-white transition-colors relative group">Marketing</a>
+                <a href="#" class="hover:text-white transition-colors relative group">Contato</a>
             </nav>
 
-            <button class="hidden md:flex items-center gap-2">
-                <iconify-icon icon="solar:bag-linear" class="text-xl text-white"></iconify-icon>
+            <a href="#" class="hidden sm:inline-flex px-6 py-3 border border-white/20 rounded-full text-[10px] font-mono uppercase tracking-widest gap-2 bg-stone-900/50 backdrop-blur-md hover:bg-white hover:text-stone-900 transition-colors">
+                Iniciar Projeto
+            </a>
+            
+            <button class="md:hidden text-2xl text-white">
+                <iconify-icon icon="solar:hamburger-menu-linear"></iconify-icon>
             </button>
         </div>
     </header>
 
-    <!-- MAIN SCROLL CONTAINER -->
-    <!-- h-[280vh] defines the scroll distance for the video scrub -->
-    <main class="relative bg-[#EAEAE5]">
+    <section class="relative h-[250vh]" id="hero-section">
+        <div class="sticky top-0 h-[100dvh] w-full overflow-hidden bg-stone-900">
+            
+            <!-- Vídeo original (escondido) -->
+            <video id="source-video" src="assets/videos/Lev-Hero.mp4" muted playsinline preload="auto" class="hidden"></video>
+            
+            <!-- Canvas Renderer -->
+            <div class="absolute inset-0 w-full h-full z-0 opacity-0" id="video-wrapper">
+                <canvas id="hero-canvas"></canvas>
+                <div class="absolute inset-0 bg-stone-900/50 mix-blend-multiply video-overlay"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/20 to-transparent video-overlay"></div>
+            </div>
 
-        <div id="hero-trigger" class="relative group h-[280vh]">
-
-            <!-- STICKY CONTENT WRAPPER -->
-            <div class="sticky top-0 h-screen w-full overflow-hidden flex flex-col md:flex-row">
-
-                <!-- LEFT COLUMN: TEXT -->
-                <div
-                    class="w-full md:w-5/12 h-screen flex flex-col justify-center px-8 md:px-24 relative z-20 order-2 md:order-1 bg-gradient-to-t md:bg-gradient-to-r from-[#EAEAE5] via-[#EAEAE5]/80 to-transparent">
-
-                    <div class="hero-text-anim opacity-0 translate-y-8">
-                        <span
-                            class="inline-block px-2 py-1 border border-stone-400 rounded-full text-[10px] uppercase font-mono tracking-widest text-stone-600 mb-6">
-                            Precision Series
+            <div class="relative z-10 max-w-[1440px] w-full mx-auto px-6 lg:px-12 h-full flex flex-col justify-end md:justify-center pb-24 md:pb-0 pt-24" id="hero-content-wrapper">
+                <div class="max-w-4xl flex flex-col justify-center">
+                    <div class="inline-flex items-center gap-3 mb-6 lg:mb-8 opacity-0" id="hero-badge">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
                         </span>
+                        <span class="text-[10px] md:text-xs font-mono uppercase tracking-widest text-white/80 font-medium">Real Estate Launch Engine</span>
                     </div>
 
-                    <h1
-                        class="font-display text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] mb-8 hero-text-anim opacity-0 translate-y-8">
-                        A caneta<br>
-                        <span class="text-outline">tecnológica</span><br>
-                        do mundo.
+                    <h1 class="font-display font-bold text-white hero-title mb-6 lg:mb-8" id="hero-title">
+                        Terceirize sua<br>
+                        incorporação.<br>
+                        <span class="text-outline-light">Acelere seus</span><br>
+                        lançamentos.
                     </h1>
 
-                    <p
-                        class="text-lg text-stone-600 max-w-md leading-relaxed font-light mb-12 hero-text-anim opacity-0 translate-y-8">
-                        A Artools redefine o equilíbrio entre peso, fluxo e design.
-                        Feita para criadores que exigem perfeição em cada traço.
+                    <p class="font-sans text-base md:text-lg text-white/80 max-w-xl leading-snug mb-8 lg:mb-12 font-light opacity-0" id="hero-desc">
+                        Da inteligência de produto ao marketing de lançamento, a Lev conduz a esteira estratégica que transforma terrenos e empreendimentos em negócios imobiliários prontos para vender.
                     </p>
 
-                    <div class="flex items-center gap-4 hero-text-anim opacity-0 translate-y-8">
-                        <button class="btn-beam px-1 py-1 rounded-sm group overflow-hidden">
-                            <div
-                                class="btn-beam-content px-8 py-4 bg-stone-900 hover:bg-stone-800 transition-colors uppercase font-mono text-xs tracking-widest gap-2">
-                                Comprar Agora
-                                <iconify-icon icon="solar:cart-large-minimalistic-linear"
-                                    class="text-lg"></iconify-icon>
-                            </div>
+                    <div class="flex flex-wrap gap-4 opacity-0" id="hero-ctas">
+                        <button class="btn-primary px-6 lg:px-8 py-3.5 lg:py-4 bg-white text-stone-900 rounded-lg text-sm font-medium transition-transform hover:-translate-y-1">
+                            Conhecer a Lev
                         </button>
-
-                        <button
-                            class="px-6 py-4 border border-stone-300 hover:bg-white hover:border-stone-400 transition-all rounded-sm uppercase font-mono text-xs tracking-widest text-stone-600 flex items-center gap-2 group">
-                            Explorar
-                            <iconify-icon icon="solar:arrow-down-linear"
-                                class="text-lg group-hover:translate-y-1 transition-transform"></iconify-icon>
+                        <button class="px-6 lg:px-8 py-3.5 lg:py-4 border border-white/30 text-white rounded-lg text-sm font-medium hover:bg-white/10 transition-all backdrop-blur-sm">
+                            Ver a esteira
                         </button>
-                    </div>
-
-                    <!-- PROGRESS INDICATOR MOBILE -->
-                    <div class="md:hidden mt-12 flex items-center gap-4 text-xs font-mono text-stone-400">
-                        <span>SCROLL TO EXPLORE</span>
-                        <div class="w-12 h-[1px] bg-stone-300"></div>
                     </div>
                 </div>
 
-                <!-- RIGHT COLUMN: VIDEO HERO -->
-                <div
-                    class="w-full md:w-7/12 h-[50vh] md:h-screen relative order-1 md:order-2 flex items-center justify-center bg-[#E6E6E1]">
-
-                    <!-- DECORATIVE ELEMENTS -->
-                    <div class="absolute inset-0 bg-grid opacity-30 pointer-events-none"></div>
-                    <div
-                        class="absolute top-[20%] right-[10%] w-[30vmax] h-[30vmax] bg-gradient-to-br from-white to-transparent rounded-full blur-3xl opacity-60">
-                    </div>
-
-                    <!-- VIDEO ELEMENT -->
-                    <!-- mix-blend-multiply helps video background blend if it's white -->
-                    <div class="relative w-full h-full md:w-[90%] md:h-[90%] flex items-center justify-center p-6">
-                        <video id="hero-video" src="assets/raw_files/video2.mp4" muted playsinline preload="auto"
-                            class="w-full h-full object-contain drop-shadow-2xl relative z-10 mix-blend-multiply"></video>
-                    </div>
-
-                    <!-- UI DETAILS (DESKTOP) -->
-                    <div class="hidden md:flex absolute bottom-12 right-12 items-end gap-8 z-20 mix-blend-multiply">
-                        <div class="flex flex-col gap-2 text-right">
-                            <div class="text-xs font-mono text-stone-400">STATUS</div>
-                            <div class="flex items-center gap-2 text-sm font-medium text-stone-600">
-                                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                                READY
-                            </div>
-                        </div>
-
-                        <div class="h-16 w-[1px] bg-stone-300"></div>
-
-                        <div class="flex flex-col gap-4">
-                            <span class="text-4xl font-display font-medium text-stone-300">01</span>
-                            <div class="flex gap-2 text-stone-400">
-                                <button class="hover:text-stone-900 transition-colors"><iconify-icon
-                                        icon="solar:arrow-left-linear" class="text-xl"></iconify-icon></button>
-                                <button class="hover:text-stone-900 transition-colors"><iconify-icon
-                                        icon="solar:arrow-right-linear" class="text-xl"></iconify-icon></button>
-                            </div>
+                <div class="hidden md:flex flex-col items-center absolute bottom-12 right-12 z-20 opacity-0" id="hero-editorial">
+                    <span class="text-[10px] font-mono uppercase text-white/50 tracking-[0.2em] mb-4 writing-vertical rotate-180">01 / Hero</span>
+                    <div class="editorial-line" id="ed-line"></div>
+                    <div class="flex flex-col items-center gap-4 mt-4">
+                        <span class="text-[10px] font-mono text-white/50 writing-vertical rotate-180 tracking-[0.1em]">Scroll to control</span>
+                        <div class="w-6 h-10 border border-white/30 rounded-full flex justify-center p-1 mt-2 backdrop-blur-sm">
+                            <div class="w-1 h-2 bg-white/60 rounded-full animate-bounce"></div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- SCROLL HINT OVERLAY -->
-            <div id="scroll-hint"
-                class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 text-stone-400 text-xs font-mono uppercase tracking-widest animate-bounce hidden md:block">
-                Scroll to Explore
+            
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 md:hidden flex flex-col items-center gap-2 opacity-50 z-20 text-white">
+                <span class="text-[10px] font-mono uppercase tracking-widest">Scroll</span>
+                <iconify-icon icon="solar:arrow-down-linear" class="animate-bounce"></iconify-icon>
             </div>
         </div>
+    </section>
 
-        <!-- SPACER FOR NEXT CONTENT (Simulated) -->
-        <section class="h-[50vh] bg-stone-100 flex items-center justify-center border-t border-stone-200">
-            <p class="text-stone-400 font-mono text-sm uppercase tracking-widest">More content below...</p>
-        </section>
-
-    </main>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", (event) => {
-            gsap.registerPlugin(ScrollTrigger);
-
-            const video = document.querySelector("#hero-video");
-            let isInitialized = false;
-
-            // 1. Initial Animations (Fade In)
-            const tlInit = gsap.timeline({ defaults: { ease: "power3.out", duration: 1.2 } });
-
-            tlInit.to(".hero-text-anim", {
-                y: 0,
-                opacity: 1,
-                stagger: 0.1,
-                delay: 0.2
-            })
-                .fromTo(video,
-                    { scale: 0.9, opacity: 0, y: 20 },
-                    { scale: 1, opacity: 1, y: 0, duration: 1.5, ease: "expo.out" },
-                    "-=1"
-                );
-
-            // 2. Video Scrub Logic
-            let videoDuration = 0;
-
-            function initScrollScrub() {
-                if (isInitialized) return;
-
-                // PREFERS-REDUCED-MOTION CHECK
-                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                if (prefersReducedMotion) {
-                    video.play();
-                    video.loop = true;
-                    isInitialized = true;
-                    return;
-                }
-
-                // CHECK DURATION VALIDITY
-                if (!video.duration) {
-                    if (video.readyState < 1) return;
-                    // Fallback for rare cases where duration is NaN
-                    if (isNaN(video.duration)) videoDuration = 5;
-                    else videoDuration = video.duration;
-                } else {
-                    videoDuration = video.duration;
-                }
-
-                isInitialized = true;
-                video.currentTime = 0;
-
-                // GSAP TIMELINE TIED TO SCROLL
-                gsap.timeline({
-                    scrollTrigger: {
-                        trigger: "#hero-trigger",
-                        start: "top top",
-                        end: "bottom bottom",
-                        scrub: 0.5, // 0.5s lag for smooth physics
-                        markers: false
-                    }
-                })
-                    .fromTo(video,
-                        { currentTime: 0 },
-                        { currentTime: videoDuration, ease: "none" }
-                    );
-
-                // TEXT PARALLAX
-                gsap.to("h1", {
-                    y: -50,
-                    scrollTrigger: {
-                        trigger: "#hero-trigger",
-                        start: "top top",
-                        end: "bottom center",
-                        scrub: true
-                    }
-                });
-            }
-
-            // --- INITIALIZATION HANDLERS ---
-            if (video.readyState >= 1) {
-                initScrollScrub();
-            }
-            video.addEventListener('loadedmetadata', initScrollScrub);
-
-            // Fallback timeout just in case metadata hangs
-            setTimeout(() => {
-                if (!isInitialized) {
-                    initScrollScrub();
-                }
-            }, 1000);
-
-            // BACKGROUND GRID PARALLAX
-            gsap.to(".bg-grid", {
-                backgroundPosition: "0px 100px",
-                ease: "none",
-                scrollTrigger: {
-                    trigger: "#hero-trigger",
-                    start: "top top",
-                    end: "bottom bottom",
-                    scrub: true
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
-
 </html>
